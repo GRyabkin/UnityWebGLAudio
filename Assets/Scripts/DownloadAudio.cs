@@ -12,19 +12,19 @@ public class DownloadAudio: MonoBehaviour
 
     public void OnAudio1Click() {
         audioSource.Stop();
-        var audioUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
+        var audioUrl = "https://unity-test-audio.s3.amazonaws.com/SoundHelix-Song-1.mp3";
         StartCoroutine(PlayAvatarAudio(audioUrl));
     }
 
     public void OnAudio2Click() {
         audioSource.Stop();
-        var audioUrl = "https://www.kozco.com/tech/LRMonoPhase4.mp3";
+        var audioUrl = "https://unity-test-audio.s3.amazonaws.com/organfinale.mp3";
         StartCoroutine(PlayAvatarAudio(audioUrl));
     }
 
     public void OnAudio3Click() {
         audioSource.Stop();
-        var audioUrl = "https://www.kozco.com/tech/organfinale.mp3";
+        var audioUrl = "https://unity-test-audio.s3.amazonaws.com/LRMonoPhase4.mp3";
         StartCoroutine(PlayAvatarAudio(audioUrl));
     }
     
