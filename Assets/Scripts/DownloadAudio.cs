@@ -12,16 +12,19 @@ public class DownloadAudio: MonoBehaviour
     public AudioSource audioSource;
 
     public void OnAudio1Click() {
+        audioSource.Stop();
         var audioUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
         StartCoroutine(PlayAvatarAudio(audioUrl));
     }
 
     public void OnAudio2Click() {
+        audioSource.Stop();
         var audioUrl = "https://www.kozco.com/tech/LRMonoPhase4.mp3";
         StartCoroutine(PlayAvatarAudio(audioUrl));
     }
 
     public void OnAudio3Click() {
+        audioSource.Stop();
         var audioUrl = "https://www.kozco.com/tech/organfinale.mp3";
         StartCoroutine(PlayAvatarAudio(audioUrl));
     }
@@ -39,7 +42,6 @@ public class DownloadAudio: MonoBehaviour
         }
         else
         {
-            audioSource.Stop();
             audioSource.clip = DownloadHandlerAudioClip.GetContent(www);
             audioSource.Play();
         }
